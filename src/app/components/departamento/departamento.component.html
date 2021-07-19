@@ -1,0 +1,26 @@
+
+
+<p>Este componente demuestra cómo obtener datos del servidor.</p>
+ 
+<div>
+  <label  class="label">Departamentos: </label>
+<select [ngModel]="selectedDevice" (ngModelChange)="onChange($event)" name="Text">
+  <option [value]="departamento.localizacionId" *ngFor="let departamento of departamentoService.departamento">{{departamento.localizacionId}}  {{departamento.descripcion}} </option>
+</select>
+<label class="label">Seleccione Departamento</label>
+</div>
+
+<h2 class="label">Municipios</h2>
+<ul class="municipio">
+  
+  <li *ngFor="let  municipios of departamentoService.municipios">
+    
+   <span class="badge">{{municipios.localizacionId}}</span> {{municipios.descripcion}}
+  </li>
+</ul>
+
+
+
+
+
+
